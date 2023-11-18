@@ -1,0 +1,194 @@
+html,
+body {
+  --zds-colors-zapier: #ff4f00;
+  --zds-colors-earth: #201515;
+  --zds-colors-moss: #1f3121;
+  --zds-colors-night: #2b2358;
+  --zds-colors-lavender: #c1b7ff;
+  --zds-colors-peach: #ffbf63;
+  --zds-colors-bolt: #f6ffdb;
+  --zds-colors-sky: #cde4e1;
+  --zds-colors-cream: #fff3e6;
+  --zds-colors-blue-jeans: #3d4592;
+  --zds-colors-bluebell: #5e71c7;
+  --zds-colors-periwinkle: #90a1ed;
+  --zds-colors-lilac: #b2bce9;
+  --zds-colors-hydrangea: #d2d8f3;
+  --zds-colors-acid-wash: #f0f1fa;
+  --zds-colors-error-500: #b83519;
+  --zds-colors-error-400: #ce482d;
+  --zds-colors-error-300: #e87057;
+  --zds-colors-error-200: #feb7a8;
+  --zds-colors-error-100: #fadfd9;
+  --zds-colors-warning-500: #dfb900;
+  --zds-colors-warning-400: #ffd300;
+  --zds-colors-warning-300: #f8df68;
+  --zds-colors-warning-200: #fcec9f;
+  --zds-colors-warning-100: #fff4bc;
+  --zds-colors-success-500: #086f3d;
+  --zds-colors-success-400: #0f884e;
+  --zds-colors-success-300: #36a770;
+  --zds-colors-success-200: #ade2c8;
+  --zds-colors-success-100: #def3e9;
+  --zds-colors-neutral-800: #2d2e2e;
+  --zds-colors-neutral-700: #403f3e;
+  --zds-colors-neutral-600: #95928e;
+  --zds-colors-neutral-500: #a8a5a0;
+  --zds-colors-neutral-400: #d7d5d2;
+  --zds-colors-neutral-300: #e8e7e4;
+  --zds-colors-neutral-200: #f7f5f2;
+  --zds-colors-neutral-100: #fffdf9;
+  --zds-typography-base: "Inter", sans-serif;
+  --zds-typography-heading: "Degular", sans-serif;
+  --zds-typography-heading-display: "Degular Display", sans-serif;
+  --zds-typography-large-letter-spacing: 1px;
+  --zds-typography-small-letter-spacing: normal;
+  --zds-typography-pageheader-weight: 700;
+  --zds-typography-semibold-weight: 600;
+  --zds-typography-medium-weight: 500;
+  --zds-typography-pageheader1-fontsize: 82px;
+  --zds-typography-pageheader1-lineheight: 84px;
+  --zds-typography-pageheader3-fontsize: 62px;
+  --zds-typography-pageheader3-lineheight: 66px;
+  --zds-typography-pageheader4-fontsize: 52px;
+  --zds-typography-pageheader4-lineheight: 60px;
+  --zds-typography-pageheader5-fontsize: 42px;
+  --zds-typography-pageheader5-lineheight: 50px;
+  --zds-typography-pageheader7-fontsize: 34px;
+  --zds-typography-pageheader7-lineheight: 40px;
+  --zds-typography-pageheader9-fontsize: 26px;
+  --zds-typography-pageheader9-lineheight: 32px;
+  --zds-typography-paragraph1short-lineheight: 24px;
+  --zds-typography-paragraph3-lineheight: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--zds-colors-neutral-100);
+  font-family: var(--zds-typography-base);
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 400;
+  color: var(--zds-colors-neutral-700);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(
+    --zds-typography-heading-display,
+    "Degular Display",
+    Helvetica,
+    arial,
+    sans-serif
+  );
+  font-weight: var(--zds-typography-pageheader-weight, 700);
+  letter-spacing: var(--zds-typography-large-letter-spacing, 1px);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: var(--zds-typography-pageheader3-fontsize, 62px);
+  line-height: var(--zds-typography-pageheader3-lineheight, 66px);
+}
+
+h2 {
+  font-size: var(--zds-typography-pageheader4-fontsize, 52px);
+  line-height: var(--zds-typography-pageheader4-lineheight, 60px);
+}
+
+h3 {
+  font-size: var(--zds-typography-pageheader5-fontsize, 42px);
+  line-height: var(--zds-typography-pageheader5-lineheight, 50px);
+}
+
+h4 {
+  font-size: var(--zds-typography-pageheader7-fontsize, 34px);
+  line-height: var(--zds-typography-pageheader7-lineheight, 40px);
+}
+
+h5 {
+  font-size: var(--zds-typography-pageheader9-fontsize, 26px);
+  line-height: var(--zds-typography-pageheader9-lineheight, 32px);
+}
+
+p,
+li {
+  font-size: 16px;
+  line-height: var(--zds-typography-paragraph3-lineheight, 24px);
+  font-weight: 400;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--zds-colors-blue-jeans);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+#__next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

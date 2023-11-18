@@ -1,0 +1,67 @@
+image: node:18
+
+stages:
+  - install
+  - validate
+
+#################################
+# yarn cache
+#################################
+
+.yarn_cache:
+  cache:
+    key:
+      # The cache key will be a SHA checksum of yarn.lock from the previous commit
+      # Uses the SHA checksum of yarn.lock to calculate the cache key.
+      # That means the cache will be shared across branches, but invalidated if yarn.lock has
+      # changed, to prevent weird cache-poisoning problems.
+      # See: https://docs.gitlab.com/ee/ci/yaml/#cachekeyfiles
+      files:
+        - yarn.lock
+    policy: pull-push
+    untracked: true
+    paths:
+      - node_modules/
+      # By default, yarn stores cache data in the home folder ~/.yarn,
+      # but in gitlab you can’t cache things outside of the project directory.
+      - .yarn-cache/
+      - packages/*/node_modules
+      - cache/Cypress
+
+# reuse cached yarn install
+.use_yarn_cache:
+  extends: .yarn_cache
+  # When reading from the cache, we still need to run `yarn install`, so
+  # yarn produces the symlinks for intra-monorepo dependencies.
+  before_script:
+    # Use `./yarn-cache` as the cache folder, since in gitlab you can’t
+    # cache things outside of the project directory.
+    - yarn install --frozen-lockfile --cache-folder .yarn-cache
+  cache:
+    policy: pull
+
+#################################
+# Install stage
+#################################
+
+install:
+  stage: install
+  before_script:
+    - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+  extends:
+    - .yarn_cache
+  script:
+    # Use `./yarn_cache` as the cache folder, since in gitlab you can’t
+    # cache things outside of the project directory.
+    - yarn install --frozen-lockfile --cache-folder .yarn-cache
+
+#################################
+# Validate stage
+#################################
+
+typecheck:
+  stage: validate
+  extends:
+    - .use_yarn_cache
+  script:
+    - yarn typecheck
