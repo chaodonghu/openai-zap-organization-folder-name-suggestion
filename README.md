@@ -102,7 +102,3 @@ This is a fullstack NextJS implementation of Zap search using OpenAI embeddings 
 ### Auth
 
 Set up with NextAuth as a Zapier Oauth app and shares auth with https://zapier-staging.com. If you are logged in on zapier-staging then that session will be shared in local development here and in Vercel preview environments for merge requests.
-
-Thanks to @sean.pitstick  for letting me run with his hack week idea and providing recommendations on where to start!
-
-Big shoutout to @will.hitchcock for making an awesome starter project that I was able to leverage and work on
