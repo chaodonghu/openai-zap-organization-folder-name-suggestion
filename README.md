@@ -1,6 +1,8 @@
 # Zap Organization/Folder Name Suggestion using OpenAI
 
-This is project based off a sandbox to experiment with AI-powered search for the 2023 Q2 Hackweek.This repository includes a NextJS full stack application that deploys to Vercel.
+This is project based off a sandbox to experiment with AI-powered search for the 2023 Q2 Hackweek.
+
+An application that enables categorization of Zaps in Zapier by using OpenAI's embedding API to analyze Zap titles, descriptions, and ZDL steps. Clusters Zaps using k-means and suggests relevant folder names for better organization. Built with Next.js and deployed on Vercel, the app allows users to define the number of desired categories for their Zaps, improving workflow management through AI-driven suggestions.
 
 ## Problem(s)
 
